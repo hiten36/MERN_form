@@ -1,0 +1,28 @@
+<div class="login-main">
+    <div class="lform-box lform-box0">
+        <div class="lform-box1">
+            <h1>Employee Login Form</h1>
+        </div>
+        <div class="lform-box2 lform-box22">
+            <div class="lform-box21">
+                <img src="images/user.png" alt="user">
+            </div>
+            <form action="login" method="POST" class="lform">
+                <input type="email" name="email" placeholder="Email" class="form-control" required>
+                <input type="password" name="password" placeholder="Password" class="form-control" required>
+                <button class="login-btn1">Login in</button>
+                <div class="lform-box4 form-check">
+                    <input id="lform-check" type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    <a href="#">Need Help?</a>
+                </div>
+            </form>
+        </div>
+        <div class="lform-box3">
+            <a href="/regis">Create an account</a>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelector('.lform-box').style.display = 'block';
+</script>

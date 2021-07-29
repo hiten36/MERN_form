@@ -1,0 +1,109 @@
+
+<div class="login-main">
+    {{#if flag}}
+        <div class="alert alert-{{color}} alert-dismissible fade show" role="alert">
+            <strong>{{msg}}</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {{/if}}
+    <div class="login-box">
+        <div class="login-box1">
+            <div class="login-img">
+                <img src="images/rocket.svg" alt="rocket">
+            </div>
+            <div class="login-box11">
+                <h1>Welcome</h1>
+                <p>to the complete MERN Backend Course</p>
+            </div>
+            <div class="login-btn">
+                <button>Login</button>
+            </div>
+        </div>
+        <div class="login-box2">
+            <div class="toggle">
+                <div class="toggle1">
+                    <div class="toggle-regis toggle-active">
+                        <b>Registration</b>
+                    </div>
+                    <div class="toggle-login">
+                        <b>Login</b>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box">
+                <div class="form-box1">
+                    <h1>Employee Registration Form</h1>
+                </div>
+                <form method="POST" action="regis" class="form-box2">
+                    <div>
+                        <input class="form-control" placeholder="First Name" name="fname" type="text" required>
+                        <input class="form-control" placeholder="Last Name" name="lname" type="text" required>
+                    </div>
+                    <div class="my-4 radio-box">
+                        <input class="form-control" placeholder="Email Address" name="email" type="email" required>
+                        <div class="radio-outer">
+                            <div id="radio">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender"
+                                        id="inlineRadio1" value="Male">
+                                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender"
+                                        id="inlineRadio2" value="Female">
+                                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <input class="form-control" placeholder="Phone Number" name="phone" type="text">
+                        <input class="form-control" placeholder="Your Age" name="age" type="text">
+                    </div>
+                    <div>
+                        <input class="form-control" placeholder="Create Password" name="password" type="text" required>
+                        <input class="form-control" placeholder="Confirm Password" name="cpassword" type="text" required>
+                    </div>
+                    <button class="form-btn">Register</button>
+                </form>
+            </div>
+            <div class="lform-box">
+                <div class="lform-box1">
+                    <h1>Employee Login Form</h1>
+                </div>
+                <div class="lform-box2">
+                    <div class="lform-box21">
+                        <img src="images/user.png" alt="user">
+                    </div>
+                    <form action="login" method="POST" class="lform">
+                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                        <input type="password" name="password" placeholder="Password" class="form-control" required>
+                        <button class="login-btn1">Login in</button>
+                        <div class="lform-box4 form-check">
+                            <input id="lform-check" type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                            <a href="#">Need Help?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="lform-box3">
+                    <a href="/regis">Create an account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelector('.toggle-login').addEventListener('click', () => {
+        document.querySelector('.toggle-regis').classList.remove('toggle-active');
+        document.querySelector('.toggle-login').classList.add('toggle-active1');
+        document.querySelector('.form-box').style.display = 'none';
+        document.querySelector('.lform-box').style.display = 'block';
+    })
+    document.querySelector('.toggle-regis').addEventListener('click', () => {
+        document.querySelector('.toggle-login').classList.remove('toggle-active1');
+        document.querySelector('.toggle-regis').classList.add('toggle-active');
+        document.querySelector('.lform-box').style.display = 'none';
+        document.querySelector('.form-box').style.display = 'block';
+    })
+</script>
